@@ -315,7 +315,7 @@ En el dominio temporal, el análisis multivariado expone una dinámica oscilator
 
 Para dar cumplimiento estricto a las restricciones metodológicas, se certifica que la matriz de entrenamiento carece de fuga de datos del futuro (\textit{Label Leakage}). Las variables predictoras ($X$) recopilan únicamente transacciones históricas conocidas hasta el cierre de enero de 2026. Los meses que conforman el vector objetivo multietiqueta (Febrero, Marzo y Abril de 2026) se encuentran aislados matemáticamente del bloque predictivo, imposibilitando que los algoritmos utilicen información posterior al momento del cálculo del pronóstico.
 
-Para la evaluación del modelo, se estructuró el dataset \texttt{MDT_FIBRA.csv}, el cual consolida las transacciones históricas permitiendo la validación \textit{out-of-sample} (fuera de muestra), fundamental para la simulación del Punto de Reorden (ROP).
+Para la evaluación del modelo, se estructuró el dataset \texttt{MDT\_FIBRA}, el cual consolida las transacciones históricas permitiendo la validación \textit{out-of-sample} (fuera de muestra), fundamental para la simulación del Punto de Reorden (ROP).
 
 \subsection{Modelo}
 \label{subsec:modelo}
@@ -502,14 +502,9 @@ Por otra parte, de acuerdo con las directrices vigentes sobre herramientas emerg
 
 El código fuente completo desarrollado en Python para este proyecto, que incluye las etapas de auditoría de datos, análisis exploratorio (EDA), ingeniería de características, y el entrenamiento y optimización de hiperparámetros de los algoritmos \textit{Ridge}, \textit{Random Forest} y \textit{XGBoost Regressor}, se encuentra alojado y documentado para su reproducibilidad técnica en el siguiente repositorio privado de acceso académico:
 \begin{itemize}
-    \item \textbf{Enlace al repositorio:} \url{https://github.com/tu_usuario/MDT_Planificacion_Lean}
+    \item \textbf{Enlace al repositorio:} \url{https://github.com/hravilam/MDT_Planificacion_Lean}
     \item \textbf{Entorno de ejecución principal:} Google Colab / GitHub Codespaces.
 \end{itemize}
-
-%%ANEXO B
-\section{Análisis de Estabilización del Flujo de Valor}\label{anex:B}
-
-Como soporte analítico complementario bajo principios \textit{Lean Manufacturing}, las proyecciones multietiqueta del modelo óptimo se acoplaron al cálculo dinámico del Punto de Reorden ($ROP$). Este análisis secundario permitió mapear los tiempos de tránsito del proveedor internacional (\textit{Lead Time} de 90 días) frente a los ritmos de consumo real de la planta, asegurando que la reducción del desperdicio por sobreinventario identificada en la sección de resultados mantenga un nivel de servicio operativo superior al $95\%$ en el suministro de las familias de fibra críticas Clase AAA.
 
 %==================  CIERRE ÚNICO DEL DOCUMENTO Y BIBLIOGRAFÍA
 \balance
